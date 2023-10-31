@@ -1,13 +1,13 @@
+use crate::components;
 use yew::prelude::*;
 
 #[function_component]
 pub fn Login() -> Html {
     html! {
         <form>
-            <div>
-                <label>{"Username:"}</label>
-                <input type="text" />
-            </div>
+            <components::input::Input label="Username" field_type="text" name="username" />
+            <components::input::Input label="Password" field_type="password" name="password" />
+            <button type="submit" class="btn btn-primary w-100">{"Submit"}</button>
         </form>
     }
 }

@@ -1,3 +1,4 @@
+use crate::components::login_form;
 use yew::prelude::*;
 
 mod components;
@@ -12,17 +13,7 @@ fn AppRoot() -> Html {
             <components::appbar::Appbar />
 
             // Login section
-            <div class="container-fluid">
-                <div class="row min-vh-100 align-items-center justify-content-center">
-                    <div class="col-sm-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <pages::login::Login />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <login_form::LoginForm />
         </>
     )
 }
